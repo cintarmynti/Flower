@@ -1,20 +1,41 @@
 package com.example.flower
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var rvFlowers: RecyclerView  // Ganti rvHeroes menjadi rvFlowers
+    private val list = ArrayList<Flower>()  // Ganti Hero menjadi Flower
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        rvFlowers = findViewById(R.id.rv_flowers)  // Ganti ID di sini
+        rvFlowers.setHasFixedSize(true)
+
+        list.addAll(getListFlowers())  // Ganti getListHeroes() menjadi getListFlowers()
+        showRecyclerList()
+    }
+
+    private fun getListFlowers(): ArrayList<Flower> {
+        val dataName = resources.getStringArray(R.array.data_name)
+        val dataDescription = resources.getStringArray(R.array.data_description)
+        val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
+        val listFlower = ArrayList<Flower>()  // Ganti listHero menjadi listFlower
+        for (i in dataName.indices) {
+            val flower = Flower(dataName[i], dataDescription[i], dataPhoto.getResourceId(i, -1))  // Ganti Hero menjadi Flower
+            listFlower.add(flower)
         }
+        dataPhoto.recycle()  // Jangan lupa untuk membebaskan array yang diperoleh
+        return listFlower
+    }
+
+    private fun showRecyclerList() {
+        rvFlowers.layoutManager = LinearLayoutManager(this)
+        val listFlowerAdapter = ListFlowerAdapter(list)  // Ganti ListHeroAdapter menjadi ListFlowerAdapter
+        rvFlowers.adapter = listFlowerAdapter
     }
 }
