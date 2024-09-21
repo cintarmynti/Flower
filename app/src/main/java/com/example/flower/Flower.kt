@@ -1,11 +1,7 @@
-// Import untuk Parcelize
-import kotlinx.parcelize.Parcelize
-import android.os.Parcelable
+package com.example.flower
 
-// Data class Hero yang mengimplementasikan Parcelable
-@Parcelize
 data class Flower(
-    val name: String,
-    val description: String,
-    val photo: Int
-) : Parcelable
+    var name: String,
+    var description: String,
+    var photo: Int
+)

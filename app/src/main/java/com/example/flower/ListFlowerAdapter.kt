@@ -1,6 +1,5 @@
 package com.example.flower
 
-import Flower
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,30 +7,25 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-// Adapter untuk List Flower
-class ListFlowerAdapter(private val listFlower: ArrayList<Flower>) : RecyclerView.Adapter<ListFlowerAdapter.ListViewHolder>() {
+class ListFlowerAdapter(private val list: ArrayList<Flower>) : RecyclerView.Adapter<ListFlowerAdapter.ListViewHolder>() {
 
-    // ViewHolder untuk setiap item dalam RecyclerView
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
-        val tvName: TextView = itemView.findViewById(R.id.tv_item_name)
-        val tvDescription: TextView = itemView.findViewById(R.id.tv_item_description)
+    inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var name: TextView = itemView.findViewById(R.id.tv_flower_name)  // ID harus sesuai dengan layout item
+        var description: TextView = itemView.findViewById(R.id.tv_flower_description)  // ID harus sesuai dengan layout item
+        var photo: ImageView = itemView.findViewById(R.id.img_flower)  // ID harus sesuai dengan layout item
     }
 
-    // Method untuk membuat tampilan ViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_flower, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_flower, parent, false)
         return ListViewHolder(view)
     }
 
-    // Menghubungkan data ke ViewHolder
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, description, photo) = listFlower[position]
-        holder.imgPhoto.setImageResource(photo)
-        holder.tvName.text = name
-        holder.tvDescription.text = description
+        val flower = list[position]
+        holder.name.text = flower.name
+        holder.description.text = flower.description
+        holder.photo.setImageResource(flower.photo)
     }
 
-    // Menghitung jumlah item
-    override fun getItemCount(): Int = listFlower.size
+    override fun getItemCount(): Int = list.size
 }
