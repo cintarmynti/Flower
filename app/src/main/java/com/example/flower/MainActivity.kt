@@ -1,6 +1,8 @@
 package com.example.flower
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,6 +20,12 @@ class MainActivity : AppCompatActivity() {
 
         list.addAll(getListFlowers())  // Ganti getListHeroes() menjadi getListFlowers()
         showRecyclerList()
+
+        val btnProfile: Button = findViewById(R.id.btn_profile)
+        btnProfile.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun getListFlowers(): ArrayList<Flower> {

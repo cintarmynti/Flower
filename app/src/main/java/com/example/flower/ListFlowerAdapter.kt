@@ -1,5 +1,6 @@
 package com.example.flower
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +26,15 @@ class ListFlowerAdapter(private val list: ArrayList<Flower>) : RecyclerView.Adap
         holder.name.text = flower.name
         holder.description.text = flower.description
         holder.photo.setImageResource(flower.photo)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, DetailActivity::class.java).apply {
+                putExtra("name", flower.name)
+                putExtra("description", flower.description)
+                putExtra("photo", flower.photo)
+            }
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = list.size
