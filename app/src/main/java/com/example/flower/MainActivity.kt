@@ -1,8 +1,11 @@
 package com.example.flower
 
 import android.content.Intent
+import android.media.Image
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
+import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,11 +21,15 @@ class MainActivity : AppCompatActivity() {
         rvFlowers = findViewById(R.id.rv_flowers)  // Ganti ID di sini
         rvFlowers.setHasFixedSize(true)
 
-        list.addAll(getListFlowers())  // Ganti getListHeroes() menjadi getListFlowers()
+        list.addAll(getListFlowers())
         showRecyclerList()
 
-        val btnProfile: Button = findViewById(R.id.btn_profile)
-        btnProfile.setOnClickListener {
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        val iconProfile: ImageView = findViewById(R.id.icon_profile)
+        iconProfile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
@@ -45,5 +52,6 @@ class MainActivity : AppCompatActivity() {
         rvFlowers.layoutManager = LinearLayoutManager(this)
         val listFlowerAdapter = ListFlowerAdapter(list)  // Ganti ListHeroAdapter menjadi ListFlowerAdapter
         rvFlowers.adapter = listFlowerAdapter
+
     }
 }
