@@ -18,6 +18,7 @@
         android:textSize="18sp"
         android:paddingTop="8dp" />
 
+
     <TextView
         android:id="@+id/tv_flower_description_detail"
         android:layout_width="wrap_content"
