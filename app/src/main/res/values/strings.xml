@@ -13,6 +13,7 @@
         <item>lavender</item>
         <item>assoka</item>
         <item>lily_of_valley</item>
+        <item>Annemone</item>
     </string-array>
     <string-array name="data_description">
         <item>Bunga matahari dikenal karena ukurannya yang besar dan bentuknya yang mirip dengan matahari. Dikenal sebagai simbol kebahagiaan dan optimisme, bunga ini memiliki kelopak kuning cerah dan pusat biji yang kaya nutrisi. Bunga matahari juga sering digunakan dalam berbagai produk, mulai dari minyak hingga hiasan.</item>
@@ -24,7 +25,7 @@
         <item>Lavender adalah bunga ungu yang terkenal karena aroma menawannya. Selain digunakan dalam aromaterapi dan produk perawatan diri, lavender juga memiliki sifat menenangkan dan sering digunakan untuk membantu tidur. Bunga ini melambangkan ketenangan dan kesetiaan.</item>
         <item>Bunga Assoka adalah bunga kecil berwarna oranye atau merah yang tumbuh di pohon Assoka. Dalam budaya India, bunga ini dianggap sakral dan simbol kebahagiaan. Bunga ini juga sering digunakan dalam dekorasi dan perayaan.</item>
         <item>Lily of the Valley adalah bunga kecil yang tumbuh dalam kelompok dan memiliki aroma yang sangat harum. Bunga ini melambangkan kesucian dan keceriaan. Meskipun indah, bunga ini juga beracun jika tertelan, sehingga perlu diperhatikan saat penanganannya.</item>
-
+        <item>Bunga anemone, dikenal juga sebagai "bunga angin," adalah tanaman berbunga dari keluarga Ranunculaceae yang terkenal dengan kelopak besar dan warna cerah, termasuk putih, merah, ungu, dan biru. Asalnya dari berbagai belahan dunia, bunga ini tumbuh di tempat lembab dan teduh, seperti hutan. </item>
     </string-array>
     <integer-array name="data_photo">
         <item>@drawable/matahari</item>
@@ -36,5 +37,6 @@
         <item>@drawable/lavender</item>
         <item>@drawable/assoka</item>
         <item>@drawable/lily_of_valley</item>
+        <item>@drawable/anemone</item>
     </integer-array>
 </resources>

@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.RecyclerView
 class ListFlowerAdapter(private val list: ArrayList<Flower>) : RecyclerView.Adapter<ListFlowerAdapter.ListViewHolder>() {
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var name: TextView = itemView.findViewById(R.id.tv_flower_name)  // ID harus sesuai dengan layout item
-        var description: TextView = itemView.findViewById(R.id.tv_flower_description)  // ID harus sesuai dengan layout item
-        var photo: ImageView = itemView.findViewById(R.id.img_flower)  // ID harus sesuai dengan layout item
+        var name: TextView = itemView.findViewById(R.id.tv_flower_name)
+        var description: TextView = itemView.findViewById(R.id.tv_flower_description)
+        var photo: ImageView = itemView.findViewById(R.id.img_flower)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
@@ -24,7 +24,7 @@ class ListFlowerAdapter(private val list: ArrayList<Flower>) : RecyclerView.Adap
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val flower = list[position]
         holder.name.text = flower.name
-        holder.description.text = flower.description
+        holder.description.text = limitDescriptionToWords(flower.description, 10)
         holder.photo.setImageResource(flower.photo)
 
         holder.itemView.setOnClickListener {
@@ -34,6 +34,15 @@ class ListFlowerAdapter(private val list: ArrayList<Flower>) : RecyclerView.Adap
                 putExtra("photo", flower.photo)
             }
             holder.itemView.context.startActivity(intent)
+        }
+    }
+
+    private fun limitDescriptionToWords(description: String, wordLimit: Int): String {
+        val words = description.split(" ")
+        return if (words.size > wordLimit) {
+            words.take(wordLimit).joinToString(" ") + "..."
+        } else {
+            description
         }
     }
 
