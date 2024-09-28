@@ -32,6 +32,8 @@ class ListFlowerAdapter(private val list: ArrayList<Flower>) : RecyclerView.Adap
                 putExtra("name", flower.name)
                 putExtra("description", flower.description)
                 putExtra("photo", flower.photo)
+                putExtra("season", flower.season)
+
             }
             holder.itemView.context.startActivity(intent)
         }
