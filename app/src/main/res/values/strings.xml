@@ -39,4 +39,52 @@
         <item>@drawable/lily_of_valley</item>
         <item>@drawable/anemone</item>
     </integer-array>
+    <string-array name="data_from">
+        <item>Amerika Utara</item>
+        <item>Tiongkok</item>
+        <item>Turki</item>
+        <item>Inggris</item>
+        <item>India</item>
+        <item>Brasil</item>
+        <item>Prancis</item>
+        <item>India</item>
+        <item>Eropa</item>
+        <item>Jepang</item>
+    </string-array>
+    <string-array name="data_blooming_season">
+        <item>Musim Panas</item>
+        <item>Akhir musim semi hingga awal musim gugur</item>
+        <item>Mekar di musim semi</item>
+        <item>Mekar di awal musim semi.</item>
+        <item>Mekar sepanjang tahun di iklim hangat.</item>
+        <item>Mekar sepanjang tahun di iklim yang hangat.</item>
+        <item>Mekar di musim panas.</item>
+        <item>Mekar sepanjang tahun di iklim yang sesuai.</item>
+        <item>Mekar di awal musim semi.</item>
+        <item>Mekar di awal musim semi hingga akhir musim panas.</item>
+    </string-array>
+    <string-array name="data_symbol">
+        <item>kebahagiaan dan kehangatan.</item>
+        <item>cinta dan keindahan</item>
+        <item>cinta yang sempurna.</item>
+        <item>harapan dan kelahiran kembali</item>
+        <item>cinta dan kesucian</item>
+        <item>keindahan dan daya tarik</item>
+        <item>ketenangan dan kebersihan</item>
+        <item>cinta dan kehidupan</item>
+        <item>kesucian dan kebahagiaan</item>
+        <item>Melambangkan perlindungan dan harapan</item>
+    </string-array>
+    <string-array name="data_laton_name">
+        <item>Helianthus annuus</item>
+        <item>Rosa</item>
+        <item>Tilipa</item>
+        <item>Narcissus</item>
+        <item>Jasminum</item>
+        <item>Bougainvillea</item>
+        <item>Lavandula</item>
+        <item>Saraca asoca</item>
+        <item>Convallaria majalis</item>
+        <item>Anemone</item>
+    </string-array>
 </resources>
