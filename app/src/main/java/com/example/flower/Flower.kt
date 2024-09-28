@@ -7,5 +7,6 @@ import kotlinx.parcelize.Parcelize
 data class Flower(
     var name: String,
     var description: String,
-    var photo: Int
+    var photo: Int,
+    var season: String,
 ) : Parcelable
