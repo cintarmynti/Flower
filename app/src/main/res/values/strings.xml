@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">MyRecyclerView</string>
 
-    <string name="flowers_name">Nama Pahlawan</string>
     <string name="description">Deskripsi</string>
+    <string name="sub_title_latin">Nama Latin</string>
+    <string name="sub_title_symbol">Makna</string>
+    <string name="sub_title_season">Musim Mekar</string>
+    <string name="sub_title_origin">Asal</string>
     <string-array name="data_name">
         <item>matahari</item>
         <item>mawar</item>
