@@ -57,14 +57,14 @@
     <string-array name="data_blooming_season">
         <item>Musim Panas</item>
         <item>Akhir musim semi hingga awal musim gugur</item>
-        <item>Mekar di musim semi</item>
-        <item>Mekar di awal musim semi.</item>
-        <item>Mekar sepanjang tahun di iklim hangat.</item>
-        <item>Mekar sepanjang tahun di iklim yang hangat.</item>
-        <item>Mekar di musim panas.</item>
-        <item>Mekar sepanjang tahun di iklim yang sesuai.</item>
-        <item>Mekar di awal musim semi.</item>
-        <item>Mekar di awal musim semi hingga akhir musim panas.</item>
+        <item>musim semi</item>
+        <item>musim semi.</item>
+        <item>iklim hangat.</item>
+        <item>iklim yang hangat.</item>
+        <item>musim panas.</item>
+        <item>sepanjang tahun</item>
+        <item>awal musim semi.</item>
+        <item>awal musim semi - akhir musim panas.</item>
     </string-array>
     <string-array name="data_symbol">
         <item>kebahagiaan dan kehangatan.</item>

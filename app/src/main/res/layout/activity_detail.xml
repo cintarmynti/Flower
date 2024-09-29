@@ -34,7 +34,8 @@
             android:textStyle="bold"
             android:textAllCaps="true"
             android:gravity="center"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"/>
 
         <TextView
             android:id="@+id/tv_flower_latin"
@@ -43,7 +44,8 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:gravity="center"
-            android:paddingTop="4dp" />
+            android:paddingTop="1dp"
+            android:fontFamily="@font/poppins_italic"/>
 
         <View
             android:layout_width="match_parent"
@@ -54,7 +56,8 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stretchColumns="1">
+            android:stretchColumns="1"
+            android:layout_marginTop="10dp">
 
             <TableRow
                 android:id="@+id/firstRow"
@@ -67,13 +70,19 @@
                     android:layout_height="wrap_content"
                     android:text="@string/sub_title_origin"
                     android:textColor="@color/white"
-                    android:paddingEnd="8dp" />
+                    android:paddingEnd="8dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_medium"
+                    />
 
                 <TextView
                     android:id="@+id/tv_flower_origin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium"/>
             </TableRow>
 
             <TableRow
@@ -87,13 +96,18 @@
                     android:layout_height="wrap_content"
                     android:text="@string/sub_title_season"
                     android:textColor="@color/white"
-                    android:paddingEnd="8dp" />
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingEnd="8dp"
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <TextView
                     android:id="@+id/tv_flower_season"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium"/>
             </TableRow>
 
             <TableRow
@@ -107,13 +121,18 @@
                     android:layout_height="wrap_content"
                     android:text="@string/sub_title_symbol"
                     android:textColor="@color/white"
-                    android:paddingEnd="8dp" />
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingEnd="8dp"
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <TextView
                     android:id="@+id/tv_flower_symbol"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium"/>
             </TableRow>
         </TableLayout>
 
@@ -121,8 +140,12 @@
             android:id="@+id/tv_flower_description_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
             android:textColor="@color/white"
-            android:paddingTop="8dp" />
+            android:paddingTop="8dp"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:lineSpacingMultiplier="1"
+            android:fontFamily="@font/poppins_medium"/>
     </LinearLayout>
 </ScrollView>
