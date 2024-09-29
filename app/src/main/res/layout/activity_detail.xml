@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/rose_pink">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_detail"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/rose_pink"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <ImageView
         android:id="@+id/img_flower_detail"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:layout_marginTop="8dp"/> <!-- Margin untuk menghindari tumpang tindih -->
 
     <TextView
         android:id="@+id/tv_flower_name_detail"

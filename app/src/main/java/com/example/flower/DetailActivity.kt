@@ -1,14 +1,22 @@
 package com.example.flower
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 
 class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
+
+        val toolbar: Toolbar = findViewById(R.id.toolbar_detail)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.baseline_arrow_back_24)
 
         val flowerName = intent.getStringExtra("name")
         val flowerDescription = intent.getStringExtra("description")
@@ -24,5 +32,15 @@ class DetailActivity : AppCompatActivity() {
         tvDescription.text = flowerDescription
         tvSeason.text = flowerSeason
         imgPhoto.setImageResource(flowerPhoto)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
