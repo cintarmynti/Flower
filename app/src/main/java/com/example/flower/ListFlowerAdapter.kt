@@ -33,6 +33,9 @@ class ListFlowerAdapter(private val list: ArrayList<Flower>) : RecyclerView.Adap
                 putExtra("description", flower.description)
                 putExtra("photo", flower.photo)
                 putExtra("season", flower.season)
+                putExtra("origin", flower.origin)
+                putExtra("latin", flower.latin)
+                putExtra("symbol", flower.symbol)
 
             }
             holder.itemView.context.startActivity(intent)

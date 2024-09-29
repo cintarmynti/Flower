@@ -19,17 +19,36 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
-        android:layout_marginTop="8dp"/> <!-- Margin untuk menghindari tumpang tindih -->
+        android:layout_marginTop="8dp"/>
 
     <TextView
         android:id="@+id/tv_flower_name_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:paddingTop="8dp" />
+        android:paddingTop="8dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/tv_flower_season"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_flower_origin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_flower_latin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_flower_symbol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

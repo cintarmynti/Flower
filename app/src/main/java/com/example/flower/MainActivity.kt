@@ -38,16 +38,24 @@ class MainActivity : AppCompatActivity() {
         val dataDescription = resources.getStringArray(R.array.data_description)
         val dataPhoto = resources.obtainTypedArray(R.array.data_photo)
         val dataBloomingSeason = resources.getStringArray(R.array.data_blooming_season)
-        val listFlower = ArrayList<Flower>()  // Ganti listHero menjadi listFlower
+        val dataOrigin = resources.getStringArray(R.array.data_origin)
+        val dataLatin = resources.getStringArray(R.array.data_latin_name)
+        val dataSymbol = resources.getStringArray(R.array.data_symbol)
+        val listFlower = ArrayList<Flower>()
         for (i in dataName.indices) {
             val flower =
-                Flower(dataName[i],
-                dataDescription[i],
-                dataPhoto.getResourceId(i, -1),
-                season = dataBloomingSeason[i] )
-            listFlower.add(flower)
+                Flower(
+                    dataName[i],
+                    dataDescription[i],
+                    dataPhoto.getResourceId(i, -1),
+                    season = dataBloomingSeason[i],
+                    origin = dataOrigin[i],
+                    latin = dataLatin[i],
+                    symbol = dataSymbol[i]
+                )
+                listFlower.add(flower)
         }
-        dataPhoto.recycle()  // Jangan lupa untuk membebaskan array yang diperoleh
+        dataPhoto.recycle()
         return listFlower
     }
 

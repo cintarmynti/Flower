@@ -9,4 +9,7 @@ data class Flower(
     var description: String,
     var photo: Int,
     var season: String,
+    var origin: String,
+    var latin: String,
+    var symbol: String
 ) : Parcelable

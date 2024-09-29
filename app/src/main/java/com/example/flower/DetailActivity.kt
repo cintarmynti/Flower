@@ -22,15 +22,24 @@ class DetailActivity : AppCompatActivity() {
         val flowerDescription = intent.getStringExtra("description")
         val flowerPhoto = intent.getIntExtra("photo", 0)
         val flowerSeason = intent.getStringExtra("season")
+        val flowerOrigin = intent.getStringExtra("origin")
+        val flowerLatin = intent.getStringExtra("latin")
+        val flowerSymbol = intent.getStringExtra("symbol")
 
         val tvName: TextView = findViewById(R.id.tv_flower_name_detail)
         val tvDescription: TextView = findViewById(R.id.tv_flower_description_detail)
         val tvSeason: TextView = findViewById(R.id.tv_flower_season)
+        val tvOrigin: TextView = findViewById(R.id.tv_flower_origin)
+        val tvSymbol: TextView = findViewById(R.id.tv_flower_symbol)
+        val tvLatin: TextView = findViewById(R.id.tv_flower_latin)
         val imgPhoto: ImageView = findViewById(R.id.img_flower_detail)
 
         tvName.text = flowerName
         tvDescription.text = flowerDescription
         tvSeason.text = flowerSeason
+        tvOrigin.text = flowerOrigin
+        tvLatin.text = flowerLatin
+        tvSymbol.text = flowerSymbol
         imgPhoto.setImageResource(flowerPhoto)
     }
 
