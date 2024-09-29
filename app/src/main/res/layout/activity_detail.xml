@@ -73,16 +73,16 @@
                     android:paddingEnd="8dp"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/poppins_medium"
-                    />
+                    android:fontFamily="@font/poppins_medium" />
 
                 <TextView
                     android:id="@+id/tv_flower_origin"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:textSize="16sp"
-                    android:fontFamily="@font/poppins_medium"/>
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_weight="1"/>
             </TableRow>
 
             <TableRow
@@ -99,15 +99,16 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:paddingEnd="8dp"
-                    android:fontFamily="@font/poppins_medium"/>
+                    android:fontFamily="@font/poppins_medium" />
 
                 <TextView
                     android:id="@+id/tv_flower_season"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/poppins_medium"/>
+                    android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_weight="1"/>
             </TableRow>
 
             <TableRow
@@ -124,15 +125,16 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:paddingEnd="8dp"
-                    android:fontFamily="@font/poppins_medium"/>
+                    android:fontFamily="@font/poppins_medium" />
 
                 <TextView
                     android:id="@+id/tv_flower_symbol"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/poppins_medium"/>
+                    android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_weight="1"/>
             </TableRow>
         </TableLayout>
 
