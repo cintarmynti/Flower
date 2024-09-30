@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 
 class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.rose_pink)
 
         val toolbar: Toolbar = findViewById(R.id.toolbar_profile)
         setSupportActionBar(toolbar)
