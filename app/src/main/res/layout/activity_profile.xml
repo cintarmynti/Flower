@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Cinta Ramayanti"
-            android:textSize="30sp"
+            android:textSize="20sp"
         android:paddingTop="20dp"
         android:fontFamily="@font/poppins_medium"
         android:textColor="@color/white"
@@ -56,9 +56,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="a296b4kx0942@bangkit.academy"
-            android:textSize="20sp"
-        android:fontFamily="@font/poppins_medium"
-        android:textColor="@color/white"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/white"
         />
     </LinearLayout>
 </ScrollView>
