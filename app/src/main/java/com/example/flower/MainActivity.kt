@@ -10,15 +10,15 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var rvFlowers: RecyclerView  // Ganti rvHeroes menjadi rvFlowers
-    private val list = ArrayList<Flower>()  // Ganti Hero menjadi Flower
+    private lateinit var rvFlowers: RecyclerView
+    private val list = ArrayList<Flower>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         window.statusBarColor = ContextCompat.getColor(this, R.color.rose_pink)
 
-        rvFlowers = findViewById(R.id.rv_flowers)  // Ganti ID di sini
+        rvFlowers = findViewById(R.id.rv_flowers)
         rvFlowers.setHasFixedSize(true)
 
         list.addAll(getListFlowers())
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showRecyclerList() {
-        rvFlowers.layoutManager = GridLayoutManager(this, 2)  // Mengubah menjadi 2 kolom
+        rvFlowers.layoutManager = GridLayoutManager(this, 2)
         val listFlowerAdapter = ListFlowerAdapter(list)
         rvFlowers.adapter = listFlowerAdapter
     }
